@@ -1,0 +1,34 @@
+.body {
+  font-family: sans-serif;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-family: sans-serif;
+}
+
+.products-item {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid;
+}
+
+.products-item a {
+  text-decoration: none;
+  color: black;
+}
+
+.breadcrumbs a{
+  text-decoration: none;
+  color: black;
+  margin-right: 5px;
+}
+
+.breadcrumbs span{
+  color: #333333;
+}
