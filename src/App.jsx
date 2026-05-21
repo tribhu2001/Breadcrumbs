@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router';
 import HomePage from './pages/HomePage';
@@ -10,9 +9,7 @@ function App() {
   return (
     <BrowserRouter>
       <div style={{fontFamily: 'sans-serif'}}>
-        <div>
-          <h1>Bobby Mart</h1>
-        </div>
+        <h1>Bobby Mart</h1>
         <BreadCrumbs/>
         <Routes>
           <Route path='/' element={<HomePage />} />

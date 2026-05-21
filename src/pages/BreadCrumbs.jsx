@@ -5,15 +5,15 @@ import "../App.css"
 const BreadCrumbs = () => {
     const { pathname } = useLocation();
     const pathNames = pathname.split("/").filter(x => x);
-    console.log(pathNames);
+    console.log(pathname, pathNames);
     let breadCrumbPath = '';
     return (
         <div className='breadcrumbs'>
             {pathNames.length>0 && <Link to='/'>Home</Link>}
             {pathNames.map((path,index)=>{
-                breadCrumbPath += path;
-                
+                breadCrumbPath += '/' + path;
                 const isLast = (index === pathNames.length-1);
+                {console.log(breadCrumbPath)}
                 return(
                     isLast ? <span key={breadCrumbPath}>/ {path}</span> : <span key={breadCrumbPath}><Link to={breadCrumbPath}>/ {path}</Link></span>
                 )
